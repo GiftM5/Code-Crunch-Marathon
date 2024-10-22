@@ -1,0 +1,46 @@
+{
+  "message": "accurate",
+  "cod": "200",
+  "count": 1,
+  "list": [
+    {
+      "id": 993800,
+      "name": "Johannesburg",
+      "coord": {
+        "lat": -26.2023,
+        "lon": 28.0436
+      },
+      "main": {
+        "temp": 296.67,
+        "feels_like": 296.46,
+        "temp_min": 295.73,
+        "temp_max": 298.18,
+        "pressure": 1011,
+        "humidity": 53,
+        "sea_level": 1011,
+        "grnd_level": 829
+      },
+      "dt": 1729602554,
+      "wind": {
+        "speed": 2.68,
+        "deg": 109
+      },
+      "sys": {
+        "country": "ZA"
+      },
+      "rain": null,
+      "snow": null,
+      "clouds": {
+        "all": 76
+      },
+      "weather": [
+        {
+          "id": 803,
+          "main": "Clouds",
+          "description": "broken clouds",
+          "icon": "04d"
+        }
+      ]
+    }
+  ]
+}
