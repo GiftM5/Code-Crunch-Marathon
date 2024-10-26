@@ -25,10 +25,9 @@ def rain_check():
         weather_conditions = Data["main"]
         rain_expected = any("rain" in condition["main"].lower() for condition in weather_conditions)
         
-        if Data["list"][0]["main"]["temp"]:
+        if rain_expected:
             send_alert()
         else:
-            send_alert()
             print("NO RAIN EXPECTED!")
     else:
         print(Data.get("message")) 
