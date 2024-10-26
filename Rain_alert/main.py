@@ -1,30 +1,28 @@
- 
-import requests,json
+from dotenv import load_dotenv
+import requests 
 from datetime import datetime
 import os
-from dotenv import load_dotenv
+
 
 
 
 load_dotenv()
-API_KEY = os.getenv("API_KEY")
+API_KEY = os.getenv("Api_key")
 print(API_KEY)
 
 def get_data():
     main_url = "http://api.openweathermap.org/data/2.5/find?"
     api_key = API_KEY
     City = "Johannesburg"
-    url = main_url + "appid=" + api_key +"&q=" + City
+    url = main_url + "appid=" + api_key + "&q=" + City
     Data = requests.get(url)
     print(Data.json()['list'][0]['main']['temp'])
-    save_json(Data.json())
+   
+
+#still trying to commit 
+get_data
 
 
 
-def save_json(data):
-    with open("data.json","w") as f:
-        json.dump(data,f,indent=2)
 
-
-
-# get_data()
+get_data()
