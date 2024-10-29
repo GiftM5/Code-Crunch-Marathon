@@ -1,7 +1,7 @@
 from twilio.rest import Client
+import requests 
 import os
 from dotenv import load_dotenv
-import requests 
 
 
 
@@ -18,11 +18,11 @@ account_sid = os.getenv("account_sid")
 auth_token = os.getenv("auth_token")
 Data = requests.get(url)
 Data = Data.json()
-
+print(Data)
 
 def rain_check():
     weather_conditions = Data["list"][0]
-    print(weather_conditions)
+    
     if any(condition in ["rain"] for condition in weather_conditions):
         send_alert()
     else:
@@ -34,7 +34,7 @@ def send_alert():
     client = Client(account_sid, auth_token)
     message = client.messages.create(
     body = "Alert: Please be aware that rain is expected today!!,Do not forget your umbrella (-_-)",
-    from_='+12092850985',
+    from_="+12097835444",
     to='+27652515201'
     )
     print("Alert_rain",message.sid)
